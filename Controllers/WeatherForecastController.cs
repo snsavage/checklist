@@ -26,6 +26,7 @@ namespace checklist.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+// Savage: Insert timeout here.
             var rng = new Random();
             return Enumerable.Range(1, 10).Select(index => new WeatherForecast
             {
