@@ -12,5 +12,8 @@ bld/
 [Oo]bj/
 [Ll]og
 
+# node
+node_modules/
+
 # VSCode
 .vscode
