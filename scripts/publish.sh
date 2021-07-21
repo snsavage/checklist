@@ -4,8 +4,14 @@ publish_path="/c/Program Files (x86)/Jenkins/workspace/Checklist-Scott-Savage-Re
 
 echo "Publishing Application"
 
-if [[ ! -d "$publish_path" ]] ; then
+if [ ! -d "$publish_path" ] ; then
     echo "publish path $publish_path could not be found"
+    exit 1
+fi
+
+echo "move to dotnet path"
+if ! cd ../dotnet ; then
+    echo "cd could not move to dotnet path"
     exit 1
 fi
 
