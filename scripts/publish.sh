@@ -1,15 +1,19 @@
 #!/bin/bash
 
-publish_path="/c/Program Files (x86)/Jenkins/workspace/Checklist-Scott-Savage-Releases-Working/releases"
+publish_path='/c/Program Files (x86)/Jenkins/workspace/Checklist-Scott-Savage-Releases-Working/releases'
+echo $publish_path
 
-echo "Publishing Application"
+exit 1
 
+echo "Preparing Application for Publication"
+
+echo "verifying publish path"
 if [ ! -d "$publish_path" ] ; then
     echo "publish path $publish_path could not be found"
     exit 1
 fi
 
-echo "move to dotnet path"
+echo "cd to dotnet path"
 if ! cd ../dotnet ; then
     echo "cd could not move to dotnet path"
     exit 1
