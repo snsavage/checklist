@@ -1,6 +1,6 @@
 #!/bin/bash
 
-publish_path="/c/Program Files (x86)/Jenkins/workspace/Checklist-Scott-Savage-Releases-Working/releases"
+publish_path='/c/Program Files (x86)/Jenkins/workspace/Checklist-Scott-Savage-Releases-Working/releases'
 
 echo "Publish Path"
 cd "$publish_path"
