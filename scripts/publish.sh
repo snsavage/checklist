@@ -1,6 +1,9 @@
 #!/bin/bash
 
-publish_path="/c/Program Files (x86)/Jenkins/workspace/Checklist-Scott-Savage-Releases-Working/releases"
+# publish_path="/c/Program Files (x86)/Jenkins/workspace/Checklist-Scott-Savage-Releases-Working/releases"
+# publish_path='/c/Program\ Files\ \(x86\)'
+publish_path='/c/Program\ Files\ \(x86\)'
+echo "$publish_path"
 
 echo "Preparing Application for Publication"
 
@@ -9,6 +12,9 @@ if [ ! -d "$publish_path" ] ; then
     echo "publish path $publish_path could not be found"
     exit 1
 fi
+
+echo "publish path verified"
+exit 0
 
 echo "cd to dotnet path"
 if ! cd ../dotnet ; then
